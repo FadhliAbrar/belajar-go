@@ -43,7 +43,7 @@ func cryptEncypt(str string, key int) *cryptograph {
 		}
 	}
 	for _, v := range takeAChar {
-		fmt.Println(v)
+		
 		var temp int
 		if v >= 26 {
 			secTemp := v / 26
@@ -55,8 +55,7 @@ func cryptEncypt(str string, key int) *cryptograph {
 				continue
 			}
 			if v*secTemp%26 > 0 {
-				temp = v % 26
-				fmt.Println("This is temp", temp)
+				temp = v % 26		
 				takeAString = append(takeAString, myAlfabet.alfabet[temp])
 				temp = 0
 				continue
